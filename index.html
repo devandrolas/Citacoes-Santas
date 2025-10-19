@@ -3,34 +3,47 @@
  <head> 
   <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"> 
   <link rel="stylesheet" href="styles/style.css"> 
+  <script src="https://kit.fontawesome.com/65aa8d9fd8.js" crossorigin="anonymous"></script>
   <title>Citações Santas</title> 
   <style>
     body {
-     // display: flex;
+     display: flex;
       flex-direction: column;
-    //  align-itens: center;
+      align-items: center;
      justify-content: center;
      margin: 0 auto;
+     min-height: 100vh;
       background-color: #0a0b1f;
       max-width: 100vw;
-      color: #a1a1a1;
-      font-size: large;
+      color: #c4c2c2;
+      font-size: larger;
     }  
+   
     #botao {
     border-radius: 8px;
+    background-color: #504d4d;
+    padding: 1rem;
     }
+    
     section {
-      align-itens: center;
+      display: flex;            
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
       text-align: center;
+      gap: 0.5rem;
+    }
+    section h1 {
+      color: #fff;
     }
   </style>
  </head> 
  <body> 
    <section>
+    <h1>Citações Santas <i class="fa-solid fa-cross"></i></h1>
   <p id="texto"></p> 
   <span id="autor"></span> 
-  <br>
+  <br><br>
   <button id="botao">Nova citação</button>  
   </section>
   <script>
@@ -96,7 +109,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "Não se opor ao erro é aprová-lo, não defender a verdade é negá-la."},
   {"autor": "Santa Teresinha do Menino Jesus", "texto": "Jesus não exige de nós grandes ações, mas simplesmente entrega e gratidão."},
   {"autor": "São Josemaría Escrivá", "texto": "Não é a doutrina de Jesus que deve adaptar-se aos tempos, mas os tempos que devem abrir-se para a luz do Salvador."},
- 
   {"autor": "São Maximiliano Kolbe", "texto": "Deus nos envia os amigos para ser nosso firme apoio no redemoinho da luta."},
   {"autor": "Santa Dulce dos Pobres", "texto": "Procuremos viver em união, em espírito de caridade, perdoando uns aos outros as nossas pequenas faltas e defeitos."},
   {"autor": "São João Bosco", "texto": "Deus nos dá talentos para que possamos partilhá-los com os outros e fazer o bem."},
@@ -110,13 +122,11 @@ const citacoes = [
   {"autor": "São Basílio Magno", "texto": "Aquele que ama verdadeiramente, não se contenta com o próprio bem, mas busca o bem do próximo."},
   {"autor": "Santa Maria Goretti", "texto": "Perdoar é a maior demonstração de amor."},
   {"autor": "São João Bosco", "texto": "A oração é a luz que ilumina o caminho da alma."},
-  {"autor": "São José", "texto": "A obediência a Deus é o caminho da paz e da felicidade."},
   {"autor": "Santo Antônio de Pádua", "texto": "A fé é a certeza das coisas que se esperam, a prova das que não se veem."},
   {"autor": "São Tomás de Aquino", "texto": "O homem não pode alcançar a verdade sem Deus."},
   {"autor": "Santa Teresa de Ávila", "texto": "Quem tem Deus, nada lhe falta."},
   {"autor": "São João Paulo II", "texto": "A esperança é a virtude que nos faz olhar para o futuro com confiança."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade é a chave para a paz interior."},
-  {"autor": "São José", "texto": "Trabalhar com dignidade é um ato de amor a Deus."},
   {"autor": "Madre Teresa de Calcutá", "texto": "A paz começa com um sorriso."},
   {"autor": "São Maximiliano Kolbe", "texto": "A vida é preciosa e deve ser oferecida em sacrifício pelo amor a Deus e ao próximo."},
   {"autor": "Santa Dulce dos Pobres", "texto": "A caridade é a lei suprema do cristão."},
@@ -131,7 +141,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "O amor a Deus é a raiz de todas as virtudes."},
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é a porta para a perfeição espiritual."},
   {"autor": "São João Bosco", "texto": "A educação é uma missão de amor."},
-  {"autor": "São José", "texto": "A proteção da família é sagrada aos olhos de Deus."},
   {"autor": "São João Paulo II", "texto": "A fé sem obras é morta."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria do Senhor é a nossa força."},
   {"autor": "Madre Teresa de Calcutá", "texto": "Não podemos fazer grandes coisas, mas podemos fazer pequenas coisas com grande amor."},
@@ -149,11 +158,10 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "Quem tem Deus nada lhe falta."},
   {"autor": "São João Paulo II", "texto": "A esperança nunca decepciona."},
   {"autor": "Santa Clara de Assis", "texto": "A paz começa no coração de cada um."},
-  {"autor": "São José", "texto": "A obediência a Deus gera frutos abundantes."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor é a única coisa que cresce à medida que se reparte."},
   {"autor": "São Maximiliano Kolbe", "texto": "A fé verdadeira se demonstra nas atitudes."},
   {"autor": "Santa Dulce dos Pobres", "texto": "O serviço ao próximo é serviço a Deus."},
-{"autor": "Santo Agostinho", "texto": "A alma que ama a Deus é livre de todo medo."},
+  {"autor": "Santo Agostinho", "texto": "A alma que ama a Deus é livre de todo medo."},
   {"autor": "São Francisco de Assis", "texto": "Comece fazendo o que é necessário, depois o que é possível e de repente você estará fazendo o impossível."},
   {"autor": "Santa Teresinha do Menino Jesus", "texto": "Não devemos temer o amor, mas abraçá-lo plenamente."},
   {"autor": "São Vicente de Paulo", "texto": "A verdadeira caridade exige doação completa de si."},
@@ -164,7 +172,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "O homem não pode alcançar a verdade sem Deus."},
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é a base da verdadeira espiritualidade."},
   {"autor": "São João Bosco", "texto": "A educação é a base da transformação do mundo."},
-  {"autor": "São José", "texto": "A santidade se encontra no trabalho cotidiano e honesto."},
   {"autor": "São João Paulo II", "texto": "Não se tenha medo de amar e servir com generosidade."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade é a porta para a paz interior."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor é a única riqueza que se multiplica ao ser dividida."},
@@ -182,7 +189,6 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "Quem ama a Deus, encontra sentido em tudo."},
   {"autor": "São João Paulo II", "texto": "A esperança é a virtude que nos sustenta na dificuldade."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria no Senhor é nossa força."},
-  {"autor": "São José", "texto": "Trabalhar com honestidade é servir a Deus."},
   {"autor": "Madre Teresa de Calcutá", "texto": "Não espere grandes gestos, ame nas pequenas coisas."},
   {"autor": "São Maximiliano Kolbe", "texto": "O amor ao próximo é a demonstração do amor a Deus."},
   {"autor": "Santa Dulce dos Pobres", "texto": "O serviço aos mais pobres é nosso verdadeiro tesouro."},
@@ -198,11 +204,10 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade nos aproxima de Deus."},
   {"autor": "São João Paulo II", "texto": "A fé nos dá força para enfrentar os desafios da vida."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade do coração é fonte de alegria."},
-  {"autor": "São José", "texto": "O trabalho honesto é santificado pelo amor."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor é a única coisa que cresce ao ser compartilhada."},
   {"autor": "São Maximiliano Kolbe", "texto": "A coragem nasce da fé e do amor a Deus."},
   {"autor": "Santa Dulce dos Pobres", "texto": "A bondade transforma o mundo à nossa volta."},
-{"autor": "Santo Agostinho", "texto": "Ama e faz o que quiseres, mas ama de verdade."},
+  {"autor": "Santo Agostinho", "texto": "Ama e faz o que quiseres, mas ama de verdade."},
   {"autor": "São Francisco de Assis", "texto": "Senhor, ensina-me a ser humilde e a amar a todos."},
   {"autor": "Santa Teresinha do Menino Jesus", "texto": "A confiança em Deus nos dá paz mesmo nas dificuldades."},
   {"autor": "São Vicente de Paulo", "texto": "A caridade é o princípio de toda ação virtuosa."},
@@ -213,7 +218,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "A fé sem razão é incompleta; a razão sem fé é vazia."},
   {"autor": "Santa Teresa de Ávila", "texto": "Quem tem Deus nada teme."},
   {"autor": "São João Bosco", "texto": "Educar é amar."},
-  {"autor": "São José", "texto": "Proteger a família é servir a Deus."},
   {"autor": "São João Paulo II", "texto": "A fé nos dá força para enfrentar qualquer desafio."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade é o caminho da verdadeira alegria."},
   {"autor": "Madre Teresa de Calcutá", "texto": "Ame e faça o bem sem esperar retorno."},
@@ -231,7 +235,6 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade nos aproxima de Deus."},
   {"autor": "São João Paulo II", "texto": "A esperança é a virtude que nos sustenta nos momentos difíceis."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria no Senhor é nossa força."},
-  {"autor": "São José", "texto": "Trabalhar com dignidade é servir a Deus."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor é a única riqueza que cresce ao ser dividida."},
   {"autor": "São Maximiliano Kolbe", "texto": "A coragem nasce da fé em Deus."},
   {"autor": "Santa Dulce dos Pobres", "texto": "O serviço ao próximo é o caminho da santidade."},
@@ -247,11 +250,10 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "Quem ama a Deus encontra sentido em tudo."},
   {"autor": "São João Paulo II", "texto": "A fé nos dá força para enfrentar os desafios da vida."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade do coração é fonte de alegria."},
-  {"autor": "São José", "texto": "O trabalho honesto é santificado pelo amor."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor cresce ao ser compartilhado."},
   {"autor": "São Maximiliano Kolbe", "texto": "A fé verdadeira se demonstra nas atitudes."},
   {"autor": "Santa Dulce dos Pobres", "texto": "O serviço aos pobres é nosso verdadeiro tesouro."},
-{"autor": "Santo Agostinho", "texto": "A fé é a força que nos sustenta na adversidade."},
+  {"autor": "Santo Agostinho", "texto": "A fé é a força que nos sustenta na adversidade."},
   {"autor": "São Francisco de Assis", "texto": "O Senhor nos ensina a amar com humildade."},
   {"autor": "Santa Teresinha do Menino Jesus", "texto": "Pequenos gestos feitos com grande amor agradam a Deus."},
   {"autor": "São Vicente de Paulo", "texto": "O amor ao próximo é a expressão do amor a Deus."},
@@ -262,7 +264,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "A razão deve caminhar junto com a fé."},
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é o caminho da verdadeira sabedoria."},
   {"autor": "São João Bosco", "texto": "Educar é mostrar o amor de Deus."},
-  {"autor": "São José", "texto": "A santidade está no trabalho honesto e no amor à família."},
   {"autor": "São João Paulo II", "texto": "Não tenham medo de abrir as portas a Cristo."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria do Senhor é nossa força diária."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor que damos aos outros volta multiplicado."},
@@ -280,7 +281,6 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "Quem ama a Deus encontra sentido em tudo."},
   {"autor": "São João Paulo II", "texto": "A esperança é a virtude que nos sustenta nos momentos difíceis."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade é a chave da verdadeira alegria."},
-  {"autor": "São José", "texto": "O trabalho honesto santifica a vida."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor cresce à medida que se doa."},
   {"autor": "São Maximiliano Kolbe", "texto": "A fé se demonstra nas ações do dia a dia."},
   {"autor": "Santa Dulce dos Pobres", "texto": "A bondade transforma a vida de todos ao redor."},
@@ -296,11 +296,10 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é o caminho para se aproximar de Deus."},
   {"autor": "São João Paulo II", "texto": "A fé nos ajuda a enfrentar todos os desafios."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria do Senhor é nossa força diária."},
-  {"autor": "São José", "texto": "O trabalho honesto é uma forma de amar a Deus."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor que damos aos outros é um reflexo do amor de Deus."},
   {"autor": "São Maximiliano Kolbe", "texto": "A coragem surge da fé e do amor ao próximo."},
   {"autor": "Santa Dulce dos Pobres", "texto": "Servir aos pobres é servir a Deus em tudo."},
-{"autor": "Santo Agostinho", "texto": "A fé é a força que nos sustenta na adversidade."},
+  {"autor": "Santo Agostinho", "texto": "A fé é a força que nos sustenta na adversidade."},
   {"autor": "São Francisco de Assis", "texto": "O Senhor nos ensina a amar com humildade."},
   {"autor": "Santa Teresinha do Menino Jesus", "texto": "Pequenos gestos feitos com grande amor agradam a Deus."},
   {"autor": "São Vicente de Paulo", "texto": "O amor ao próximo é a expressão do amor a Deus."},
@@ -311,7 +310,6 @@ const citacoes = [
   {"autor": "São Tomás de Aquino", "texto": "A razão deve caminhar junto com a fé."},
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é o caminho da verdadeira sabedoria."},
   {"autor": "São João Bosco", "texto": "Educar é mostrar o amor de Deus."},
-  {"autor": "São José", "texto": "A santidade está no trabalho honesto e no amor à família."},
   {"autor": "São João Paulo II", "texto": "Não tenham medo de abrir as portas a Cristo."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria do Senhor é nossa força diária."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor que damos aos outros volta multiplicado."},
@@ -329,7 +327,6 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "Quem ama a Deus encontra sentido em tudo."},
   {"autor": "São João Paulo II", "texto": "A esperança é a virtude que nos sustenta nos momentos difíceis."},
   {"autor": "Santa Clara de Assis", "texto": "A simplicidade é a chave da verdadeira alegria."},
-  {"autor": "São José", "texto": "O trabalho honesto santifica a vida."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor cresce à medida que se doa."},
   {"autor": "São Maximiliano Kolbe", "texto": "A fé se demonstra nas ações do dia a dia."},
   {"autor": "Santa Dulce dos Pobres", "texto": "A bondade transforma a vida de todos ao redor."},
@@ -345,7 +342,6 @@ const citacoes = [
   {"autor": "Santa Teresa de Ávila", "texto": "A humildade é o caminho para se aproximar de Deus."},
   {"autor": "São João Paulo II", "texto": "A fé nos ajuda a enfrentar todos os desafios."},
   {"autor": "Santa Clara de Assis", "texto": "A alegria do Senhor é nossa força diária."},
-  {"autor": "São José", "texto": "O trabalho honesto é uma forma de amar a Deus."},
   {"autor": "Madre Teresa de Calcutá", "texto": "O amor que damos aos outros é um reflexo do amor de Deus."},
   {"autor": "São Maximiliano Kolbe", "texto": "A coragem surge da fé e do amor ao próximo."},
   {"autor": "Santa Dulce dos Pobres", "texto": "Servir aos pobres é servir a Deus em tudo."},
@@ -367,4 +363,5 @@ function novaCitacao() {
 botao.addEventListener("click", novaCitacao);
 </script> 
  
-</body></html>
+</body>
+</html>
